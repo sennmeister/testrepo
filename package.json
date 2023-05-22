@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "testrepo",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "astro": "^2.4.1"
+  },
+  "devDependencies": {
+    "sass": "^1.62.1"
   }
 }
