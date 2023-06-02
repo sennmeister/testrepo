@@ -1,25 +1,28 @@
 # testrepo
 
-## Beschreibung
+&nbsp;
+
+## 1. Beschreibung
 Mein Repository für verschiedene Tests und Versuche.
 
+&nbsp;
 
-## Branches
+## 2. Branches
 
-### main
+### - main
 Der Mainbranch wird immer clean gehalten.
 
-### Feature
+### - Feature
 Vom Featurebranch aus werden Tests und Projekte gestartet.
 
-### astro
+### - astro
 Branch für Tests in und mit AstroJS.
 
-### scss
+### - scss
 Tests zur Integration von SCSS in AstroJS.
 
-### readme-test
+### - readme-test
 Änderungen in der readme.md Datei werden immer in diesem Branch gemacht und dann in den main-Branch gemergt.
 
-### sennmeister-patch-1
+### - sennmeister-patch-1
 Tests und Übungen mit GizHub Actions.
