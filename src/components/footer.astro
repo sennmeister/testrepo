@@ -1,0 +1,84 @@
+---
+import NavigationSocialBar from "./NavigationSocialBar.astro";
+import NavigationLinks from "./NavigationLinks.astro";
+import Copyrite from "./copyrite.astro";
+
+---
+
+<footer>
+    <div class="footerTitle">
+        <p>sennpics.ch</p>
+        <hr>
+    </div>
+    
+    <div class="footerContent">
+        <div class="footerContentNav">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/galerie">Galerie</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footerContentSocial">
+            <NavigationSocialBar />
+        </div>
+        <div class="footerContentKontakt">
+            Werner Frischknecht <br>
+            mail@sennpics.ch <br>
+            <br>
+            Webmaster: <br>
+            mail@sennwebs.ch <br>
+        </div>
+    </div>
+    
+    <div>
+        <Copyrite name="sennpics.ch" />
+    </div>
+</footer>
+
+
+<style lang="scss">
+    footer {
+        display: block;
+        background-color: var(--accent);
+        color: var(--textHell);
+        margin-top: 2rem;
+        padding: 2rem;
+        text-align: center;
+        font-size: 0.8rem;
+        div {
+            margin-bottom: 2rem;
+        }
+        .footerTitle {
+            p {
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+        }
+        .footerContent {
+            display: flex;
+            justify-content: space-around;
+            .footerContentNav {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    nav {
+        padding-right: 1rem;
+        ul {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        a {
+            color: var(--textHell);
+            font-weight: bolder;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+</style>

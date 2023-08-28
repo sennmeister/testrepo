@@ -1,0 +1,83 @@
+---
+import NavigationSocialIcon from "./NavigationSocialIcon.astro";
+
+export interface Props {
+  icon?: string;
+  title?: string;
+  url?: string;
+  target?: string;
+  css?: string;
+}
+
+const { title, icon, url, target = "_blank", css } = Astro.props;
+---
+
+<div class="card">
+    <div class="border">
+        <h2>{title}</h2>
+        <ul>
+            <li>Model, Gesang, Mädchen für alls</li>
+            <li>aus Musterhausen</li>
+            <li>verheiratet, 4 Kinder</li>
+        </ul>
+        <div class="icons">
+            <NavigationSocialIcon
+            icon="logos:twitter"
+            url="https://twitter.com/ProgrammierenM"
+            title="Twitter"
+            />
+
+        </div>
+    </div>
+</div>
+
+   <style lang="scss">
+    .card {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 60px -60px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: 30px;
+        transition: background 1s ease-in-out;
+        
+        background-color: black;
+        background: url('https://www.herballgaier.com/wp-content/uploads/beauty-shooting-Herb-Allgaier-Stuttgart-Kopie.jpg') center center no-repeat;
+        background-size: 300px;
+        &:hover {
+            //background: url('https://www.herballgaier.com/wp-content/uploads/beauty-shooting-Herb-Allgaier-Stuttgart-Kopie.jpg') right center no-repeat;
+            background: url('https://www.herballgaier.com/wp-content/uploads/Farbige-Frauen-Fotografie-Stuttgart.jpg') right center no-repeat;
+            background-size: 630px;
+        }
+        
+    }
+
+    .border {
+        width: 290px;
+        height: 290px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        ul {
+            list-style: none;
+            text-align: right;
+        }
+        
+        color: white;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+            }
+        transition: opacity 1.5s;
+        
+    }
+
+
+   </style>

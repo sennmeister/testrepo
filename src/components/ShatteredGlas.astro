@@ -1,0 +1,145 @@
+---
+const {ueberschrift, text} = Astro.props;
+---
+
+<div class="image">
+    <div class="image-glas splinter-1"></div>
+    <div class="image-glas splinter-2"></div>
+    <div class="image-glas splinter-3"></div>
+    <div class="image-glas splinter-4"></div>
+    <div class="image-glas splinter-5"></div>
+    <div class="image-glas splinter-6"></div>
+    <div class="image-glas splinter-7"></div>
+    <div class="image-glas splinter-8"></div>
+    <div class="image-glas splinter-9"></div>
+
+    <div class="intro">
+        <h3>{ueberschrift}</h3>
+        <p> {text} </p>
+    </div>
+
+    <img src="src/assets/pics/landscape/landscape_001.jpg" alt="Bild aus Tokio bei Nacht." />
+</div>
+
+<style>
+.image {
+  display: flex;
+  position: relative;
+  perspective: 900px;
+}
+.image .intro {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 2;
+  transition: 350ms ease-out all;
+}
+.image .intro h3,
+.image .intro p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  opacity: 0;
+  transition: 250ms ease-in-out all;
+  transform: rotateX(30deg) translate(0, 0);
+}
+.image .intro h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.image .intro p {
+  font-size: 0.8rem;
+}
+.image:hover img {
+  transform: rotateX(25deg) translate(0, 0);
+}
+.image:hover .intro h3,
+.image:hover .intro p {
+  opacity: 1;
+  transform: rotateX(0) translate(0, -2rem);
+}
+.image:hover .intro p {
+  transition-delay: 100ms;
+}
+.image:hover .image-glas {
+  backdrop-filter: blur(0.5rem);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+.image:hover .image-glas.splinter-1 {
+  transform: translate3d(-1rem, 0, 2rem);
+}
+.image:hover .image-glas.splinter-2 {
+  transform: translate3d(0.5rem, 0, 2rem);
+}
+.image:hover .image-glas.splinter-3 {
+  transform: translate3d(1rem, 0, 2rem);
+}
+.image:hover .image-glas.splinter-4 {
+  transform: translate3d(1rem, 1rem, 2rem);
+}
+.image:hover .image-glas.splinter-5 {
+  transform: translate3d(1rem, 1.8rem, 2rem);
+}
+.image:hover .image-glas.splinter-6 {
+  transform: translate3d(1rem, 2.5rem, 2rem);
+}
+.image:hover .image-glas.splinter-7 {
+  transform: translate3d(0, 2.3rem, 2rem);
+}
+.image:hover .image-glas.splinter-8 {
+  transform: translate3d(-1rem, 2.5rem, 2rem);
+}
+.image:hover .image-glas.splinter-9 {
+  transform: translate3d(-1rem, 1rem, 2rem);
+}
+.image .image-glas {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  transition: 150ms ease-out all;
+  backdrop-filter: blur(0rem);
+  border: 0.1rem solid rgba(255, 255, 255, 0.05);
+}
+.image .image-glas.splinter-1 {
+  clip-path: polygon(0 0, 15% 0, 50% 50%, 0 30%);
+}
+.image .image-glas.splinter-2 {
+  clip-path: polygon(15% 0, 60% 0, 50% 50%);
+}
+.image .image-glas.splinter-3 {
+  clip-path: polygon(60% 0, 100% 0, 100% 15%, 50% 50%);
+}
+.image .image-glas.splinter-4 {
+  clip-path: polygon(100% 15%, 100% 42%, 50% 50%);
+}
+.image .image-glas.splinter-5 {
+  clip-path: polygon(50% 50%, 100% 42%, 100% 81%);
+}
+.image .image-glas.splinter-6 {
+  clip-path: polygon(50% 50%, 100% 81%, 100% 100%, 72% 100%);
+}
+.image .image-glas.splinter-7 {
+  clip-path: polygon(50% 50%, 72% 100%, 22% 100%);
+}
+.image .image-glas.splinter-8 {
+  clip-path: polygon(50% 50%, 22% 100%, 0% 100%, 0% 81%);
+}
+.image .image-glas.splinter-9 {
+  clip-path: polygon(50% 50%, 0% 81%, 0% 30%);
+}
+.image img {
+  width: 100%;
+  max-width: 20rem;
+  border-radius: 1rem;
+  transition: 150ms ease-out all;
+}
+    
+    
+
+</style>

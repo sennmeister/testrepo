@@ -1,0 +1,35 @@
+---
+import { Picture } from '@astrojs/image/components';
+---
+<div class="masonry-gallery">
+    <Picture src={import("../assets/pics/bild1.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item" />
+    <Picture src={import("../assets/pics/bild2.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild3.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild1.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild2.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild3.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild1.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild2.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild3.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild1.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild2.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+    <Picture src={import("../assets/pics/bild3.jpg")} widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px" alt="Das Astro-Logo" class="gallery-item"/>
+
+</div>
+
+<style>
+ 
+    .masonry-gallery {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       grid-gap: 10px;
+     }
+     
+     .gallery-item {
+       position: relative;
+       overflow: hidden;
+       cursor: pointer;
+     }
+     
+    
+   </style>

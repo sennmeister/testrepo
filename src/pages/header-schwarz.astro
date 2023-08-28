@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GradientNav from '../components/gradientNav.astro';
+---
+
+<Layout title="Header schwarz">
+	
+    <header>
+        <div class="headerSW box">
+            <div class="text">
+                sennwebs
+            </div>
+        </div>
+
+        <div class="naviSW box">
+            <GradientNav title='HOME' url='' />
+            <GradientNav title='header-schwarz' url='header-schwarz' />
+        </div>
+    </header>
+    
+    <main>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, ducimus? Adipisci illum maxime laboriosam ut quae aliquid laborum blanditiis veniam non inventore sapiente maiores voluptatem repudiandae, vero, labore at. Quam aut facilis sit provident. Modi est alias vel asperiores veritatis fuga quo nesciunt! Corrupti cumque excepturi, odio maxime veniam provident enim voluptates vero iste ad aliquid accusamus suscipit vel? Illo dolore illum facere maxime recusandae sapiente amet, distinctio totam nobis perspiciatis vitae provident adipisci cumque, numquam omnis, ducimus ad? Nostrum nobis architecto porro hic eos amet, similique, debitis dolor repellendus reiciendis deleniti tempora exercitationem odio harum dolorum ipsam assumenda sunt. Animi voluptatibus alias culpa laudantium suscipit aut, aperiam, voluptate illum assumenda nobis veritatis fuga nesciunt ullam eos unde saepe quos quibusdam nulla ex dolorem soluta et accusantium? Labore veniam repellat quod ea? Assumenda dicta quae quasi a harum distinctio neque, similique voluptatem, commodi recusandae repellat? Ipsam maxime, dolore voluptatem cum labore est placeat molestias laudantium tempora, quis eius ab deserunt deleniti assumenda vel facere suscipit officiis laborum! Nostrum repudiandae molestiae dolorum ipsa nesciunt autem, quam velit est distinctio pariatur quibusdam facilis, temporibus natus porro maxime consequatur vel, architecto fuga atque doloremque! Dolore omnis tempore dolor voluptatum impedit vero rem nihil. Praesentium necessitatibus quidem eos inventore nam amet fugit officiis? Voluptates reiciendis quam porro eius similique neque rem blanditiis est, optio, itaque consequuntur animi aspernatur aut, in doloremque dolor odio dolores quos. Fugit, asperiores. Rem deserunt obcaecati veritatis accusantium quas non cupiditate autem animi beatae impedit ullam provident omnis, iste molestias sed saepe est vero blanditiis aliquam magnam nam? Ducimus incidunt illo labore sapiente accusantium, ratione accusamus perferendis alias quam porro voluptatem explicabo repellendus quod veniam libero, debitis ipsam sunt dolorum blanditiis deserunt officia provident magni saepe atque! Distinctio voluptate animi incidunt consectetur ex debitis, eaque blanditiis autem accusantium ratione nihil, nobis iste iusto voluptas cupiditate beatae quae adipisci doloremque tempore repudiandae. Amet ut quo minus, nesciunt sunt, maiores deserunt tenetur quam consequatur voluptas necessitatibus, earum illum et voluptatem. Impedit voluptas ut officiis veritatis aspernatur, laudantium, placeat animi blanditiis molestias dolorum non, modi minus debitis esse asperiores saepe mollitia quos error totam velit qui? Voluptatum commodi facere consequuntur nisi maxime quas fugit tempora nostrum, laborum nobis mollitia! Reprehenderit culpa dicta nesciunt qui laborum beatae consequuntur asperiores! Culpa voluptate repudiandae necessitatibus? Cupiditate repellat maiores delectus officiis tenetur, quos voluptatem eveniet provident laboriosam rem voluptate omnis laborum alias eos quidem! Eos quibusdam tempore molestias, doloribus vel ad maxime dolor quas necessitatibus facilis! Doloribus fugit non possimus, ullam quo temporibus eius! Dolorem iure accusamus, et at officiis sapiente placeat laboriosam provident voluptatem? Temporibus aliquid libero earum natus nemo modi, nisi inventore ullam vel impedit eum voluptate dolore ad magni in doloremque tenetur? Quae fugit accusantium odio sequi, nobis quis praesentium cumque nostrum totam. Corrupti quod numquam iste fugiat voluptates fugit velit adipisci maxime, commodi itaque ab, modi magnam et corporis laborum optio quis aspernatur impedit quam ullam ex culpa provident officiis pariatur. Delectus explicabo iure voluptates eos soluta hic cum laborum sunt ab quod?</p>
+
+	</main>
+</Layout>
+
+<style>
+
+    :root {
+        --gradient: linear-gradient(135deg, rgba(255,81,238,1) 0%, rgba(81,218,255,1) 35%, rgba(64,95,255,1) 100%);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #0c1016;
+    }
+
+	main {
+		margin: auto 0;
+		display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+	}
+
+    .box {
+        width: 96%;
+        margin: 0.1rem 0;
+
+    }
+
+    .headerSW {
+        background: red;
+        background: linear-gradient(135deg, rgba(255,81,238,1) 0%, rgba(81,218,255,1) 35%, rgba(64,95,255,1) 100%)
+        
+    }
+	
+    .naviSW {
+        background-color: #0c1016;
+        height: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 32px;
+        gap: 2rem;
+    }
+
+    a {
+        padding: 1rem 2rem;
+        
+        color: aliceblue;
+        background-color: rgba(0, 0, 0, 0);
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(135deg, rgba(255,81,238,1) 0%, rgba(81,218,255,1) 35%, rgba(64,95,255,1) 100%);
+        
+    }
+</style>
