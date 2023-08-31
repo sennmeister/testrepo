@@ -4,6 +4,7 @@ import '../styles/_colors.sass';
 
 import HeaderOS from '../components/HeaderOS.astro';
 import FooterOS from '../components/FooterOS.astro';
+import OsNavTop from '../components/OsNavTop.astro';
 
 
 
@@ -27,8 +28,18 @@ const { title } = Astro.props;
 	<body>
 
         <HeaderOS />
+
+		<main>
+
+			<article>
+				<OsNavTop />
+				
+				<slot />
+
+			</article>
+	
+		</main>
 		
-		<slot />
 
         <FooterOS />
 		

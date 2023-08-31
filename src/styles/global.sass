@@ -1,3 +1,7 @@
+@import "colors2"
+
+:root
+    --bgColor: $OS_colors-2-hex
 
 
 *
@@ -6,8 +10,8 @@
     box-sizing: border-box
 
 body
-    background-color: blue
-    color: white
+    background-color: $OS_colors-2-hex
+    color: $OS_colors-4-hex
     display: flex
     flex-direction: column
     min-height: 100vh
@@ -16,16 +20,87 @@ body
 
 header, main, footer
     width: 100%
-    max-width: 1200px
+    display: flex
+    justify-content: center
     margin: 0 auto
 
 header
-    background-color: red
+    height: 84px
+    
+    .headercontainer
+        width: 100%
+        max-width: 1200px
+        position: relative
+        z-index: 1
+        .logo
+            background-image: url(../pics/OSheaderSchrift.svg)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            filter: blur(5px)
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 2
+            width: 100%
+            height: 100%
+        .headerTitle
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 3
+            background-color: rgba($OS_colors-2-hex, 0) //rgba(0,40,79, 0)
+
 
 main
-    margin-top: 100px
+    margin-top: 10px
+    min-height: 5rem
     flex: 1
 
+nav
+    height: 50px
+    position: sticky
+    top: 0
+    background-color: $OS_colors-2-hex
+    margin-bottom: 32px
+    box-shadow: 0px 15px 25px $OS_colors-2-hex
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    gap: 2rem
+    padding-right: 8px
+    a
+        text-decoration: none
+        display: flex
+        align-items: center
+        color: white
+        background-color: $OS_colors-1-hex
+        border-radius: 8px
+        border: 1px solid $OS_colors-1-hex
+        padding: 4px 16px
+        &:hover
+            color: $OS_colors-3-hex
+            border: 1px solid $OS_colors-3-hex
+        .icon
+            margin-right: 8px
+        .text
+            @media screen and (max-width: 430px)
+                display: none
+        
+
+
+article
+    width: 100%
+    max-width: 1200px
+    
+
 footer
-    background-color: rebeccapurple
+    background-color: $OS_colors-1-hex
+    min-height: 5rem
+
 
