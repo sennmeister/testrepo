@@ -1,0 +1,135 @@
+/* Photo Gallery Preview ---------------------------------- */
+
+.PhotoGallery-preview {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.PhotoGallery-preview img {
+  user-select: none;
+  max-width: calc(100% - 300rem);
+  max-height: calc(100% - 300rem);
+}
+
+.PhotoGallery-preview svg {
+  cursor: pointer;
+  height: auto;
+  width: 50rem;
+  padding: 50rem;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-out;
+}
+
+.PhotoGallery-preview svg:hover {
+  opacity: 1;
+}
+
+.PhotoGallery-preview svg path {
+  fill: #ffffff;
+}
+
+.PhotoGallery-preview div {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+@media (max-width: 1200px) {
+
+  .PhotoGallery-preview img {
+    max-width: calc(100% - 210rem);
+    max-height: calc(100% - 210rem);
+  }
+  
+  .PhotoGallery-preview svg {
+    width: 40rem;
+    padding: 32.5rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .PhotoGallery-preview img {
+    max-width: calc(100% - 120rem);
+    max-height: calc(100% - 120rem);
+  }
+  
+  .PhotoGallery-preview svg {
+    width: 30rem;
+    padding: 15rem;
+  }
+
+}
+
+
+/* Photo Gallery List ------------------------------------- */
+
+.PhotoGallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100rem;
+}
+
+.PhotoGallery-list > div {
+  cursor: pointer;
+  width: calc(25% - 100rem);
+  margin: 50rem;
+}
+
+.PhotoGallery-list > div div {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+
+.PhotoGallery-list img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-out;
+}
+
+.PhotoGallery-list > div:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+
+  .PhotoGallery-list {
+    margin: 70rem;
+  }
+  
+  .PhotoGallery-list > div {
+    width: calc(33.33% - 70rem);
+    margin: 35rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .PhotoGallery-list {
+    margin: 40rem;
+  }
+  
+  .PhotoGallery-list > div {
+    width: calc(50% - 40rem);
+    margin: 20rem;
+  }
+
+}
